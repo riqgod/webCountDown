@@ -8,9 +8,9 @@
 </head>
 
 <body>
-  <div class="mainFrame">
+  <div class="mainFrame" id="frame">
     <div>
-            <p id="demo" class="countDownText"></p>
+            <div id="demo"></div>
     </div>
   </div>
   </img>
@@ -18,7 +18,7 @@
 </html>
 <script>
     // Set the date we're counting down to
-    var countDownDate = new Date("Oct 21, 2022 20:30:00").getTime();
+    var countDownDate = new Date("Oct 21, 2022 21:30:00").getTime();
     
     // Update the count down every 1 second
     var x = setInterval(function() {
@@ -36,13 +36,50 @@
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
       // Display the result in the element with id="demo"
-      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-      + minutes + "m " + seconds + "s ";
+      document.getElementById("demo").innerHTML = 
+      
+      `
+      <div class="frameCountDown">
+        <div class="countDownText">
+          ${days}d ${hours}h ${minutes}m ${seconds}s
+        </div>
+      </div>
+      `;
     
       // If the count down is finished, write some text
-      if (distance < 0) {
+      if (distance > 0) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "<3 <3 <3 <3 <3 <3";
+
+        document.getElementById("demo").innerHTML = `
+                                                    <div class="framePoem">
+                                                      <div class="poemText">
+                                                      <p>Saudades.<br></p>
+
+                                                      <p> Olho o relógio <br>
+                                                      Sensação angustiante <br>
+                                                      Tempo não passa <br> 
+                                                      De você, estou distante <br>
+                                                      Odeio a despedida <br>
+                                                      Meu sofrimento constante <br> </p>
+                                                      
+                                                      <p> Não são horas iguais <br>
+                                                      Mas estou pensando em tu <br> 
+                                                      Seja em como tá o seu dia <br>
+                                                      Ou desejando teu corpo nú <br> </p>
+
+                                                      <p> Ansiando nosso encontro <br>
+                                                      Encaro a semana <br>
+                                                      Não vejo a hora de ter você <br>
+                                                      na minha vida cotidiana <br> </p>
+
+
+                                                      <p> Tô contando o tempo <br>
+                                                      Quero sentir que somos um <br>
+                                                      A saudade me aperta <br>
+                                                      Chega logo dia 21 <br> </p>
+                                                      </div>
+                                                    </div>
+                                                      `;
       }
     }, 1000);
     </script>

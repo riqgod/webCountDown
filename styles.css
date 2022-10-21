@@ -11,12 +11,6 @@ body
 }
 
 .mainFrame{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 15vh;
-    width: 30vw;
-    /* white: #faebac, red: #d55252 */
     border-radius: 10px;
     background-color: #d55252;
     box-shadow:
@@ -30,8 +24,34 @@ body
     
 }
 
+.framePoem{
+    height: 50vh;
+    width: 20vw;
+    min-height: 500px;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frameCountDown{
+    height: 15vh;
+    min-height: 100px;
+    width: 30vw;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .countDownText{
     color: #faebac;
     font-family: Times;
-    font-size: 2vw;
+    font-size: 32px;
+}
+
+.poemText{
+    color: #faebac;
+    font-family: Times;
+    font-size: 16px;
 }
