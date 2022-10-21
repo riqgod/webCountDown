@@ -26,9 +26,9 @@ body
 
 .framePoem{
     height: 50vh;
-    width: 20vw;
+    width: 30vw;
     min-height: 500px;
-    min-width: 300px;
+    min-width: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,5 +53,5 @@ body
 .poemText{
     color: #faebac;
     font-family: Times;
-    font-size: 16px;
+    font-size: 32px;
 }
